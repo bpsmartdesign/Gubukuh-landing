@@ -7,4 +7,4 @@ This is the shared repo about the reproduction of `Gubukyh landing page` from [D
 ## Project setup
 
 > Install dependencies using `yarn` or `npm install`
-> And run your project localy using `yarn start` or `npm run start`
+> And run your project localy using `yarn start:dev` or `npm run start:dev`

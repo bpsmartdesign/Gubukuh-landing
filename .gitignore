@@ -35,3 +35,6 @@ src/docs/.vuepress/.temp
 .env.test
 .env.production
 .env.development
+
+# yarn berry version files
+.yarn/*

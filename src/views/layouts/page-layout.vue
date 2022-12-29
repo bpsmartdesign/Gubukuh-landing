@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main class="cva--page_container">
+  <main class="is-page_container">
     <slot />
   </main>
 </template>

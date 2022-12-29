@@ -53,6 +53,13 @@
           <li><i class="lab la-telegram"></i></li>
         </ul>
       </div>
+      <div class="mt-4"></div>
+      <div class="mt-4 is-flex gap-8">
+        <img src="@/assets/images/logo-1.png" style="height: 25px" alt="LOGO">
+        <img src="@/assets/images/logo-2.png" style="height: 25px" alt="LOGO">
+        <img src="@/assets/images/logo-3.png" style="height: 25px" alt="LOGO">
+        <img src="@/assets/images/logo-4.png" style="height: 25px" alt="LOGO">
+      </div>
     </section>
   </div>
 </template>

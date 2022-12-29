@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html, body {
   @apply text-text-primary;
+}
+
+.is-flex {
+  @apply flex;
+  @apply items-center;
+}
+
+.is-flex-center {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
+
+.is-flex-top {
+  @apply flex;
+  @apply items-start;
 }

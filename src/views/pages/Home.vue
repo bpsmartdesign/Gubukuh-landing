@@ -39,12 +39,9 @@
             src="@/assets/images/asset-2.jpg"
             alt="Asset 2"
             class="absolute border-8 border-solid border-white"
-            style="bottom: -40%; left: 28%;"
+            style="bottom: -40%; left: 28%"
           />
-          <img
-            src="@/assets/images/asset-1.jpg"
-            alt="Asset 1"
-          />
+          <img src="@/assets/images/asset-1.jpg" alt="Asset 1" />
         </div>
         <ul class="">
           <li><i class="lab la-twitter"></i></li>
@@ -53,12 +50,44 @@
           <li><i class="lab la-telegram"></i></li>
         </ul>
       </div>
-      <div class="mt-4"></div>
-      <div class="mt-4 is-flex gap-8">
-        <img src="@/assets/images/logo-1.png" style="height: 25px" alt="LOGO">
-        <img src="@/assets/images/logo-2.png" style="height: 25px" alt="LOGO">
-        <img src="@/assets/images/logo-3.png" style="height: 25px" alt="LOGO">
-        <img src="@/assets/images/logo-4.png" style="height: 25px" alt="LOGO">
+      <div class="mt-4">
+        <div class="is-flex is-tab_list">
+          <button class="text-primary bg-white px-8 py-2">Buy</button>
+          <button class="bg-gray-400 text-gray-600 px-8 py-2">Sell</button>
+          <button class="bg-gray-400 text-gray-600 px-8 py-2">Rent</button>
+        </div>
+        <div
+          class="is-tab_content w-fit px-8 py-4 is-flex gap-6"
+          style="box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px"
+        >
+          <div class="is-left border-r border-gray-300 border-solid pr-8">
+            <p class="is-flex gap-2 text-sm text-gray-600 mb-2">
+              <i class="las la-map-marker"></i>
+              <span>Location</span>
+            </p>
+            <p class="is-flex gap-6">
+              <span>Semarang, Indonesia</span>
+              <i class="text-xs las la-angle-down"></i>
+            </p>
+          </div>
+          <div class="is-right">
+            <p class="is-flex gap-2 text-sm text-gray-600 mb-2">
+              <i class="las la-home"></i>
+              <span>Style</span>
+            </p>
+            <p class="is-flex gap-6">
+              <span>Modern, Minimalist</span>
+              <i class="text-xs las la-angle-down"></i>
+            </p>
+          </div>
+          <button class="bg-primary px-6 py-2 text-white ml-20">Search</button>
+        </div>
+      </div>
+      <div class="mt-24 is-flex gap-8">
+        <img src="@/assets/images/logo-1.png" style="height: 25px" alt="LOGO" />
+        <img src="@/assets/images/logo-2.png" style="height: 25px" alt="LOGO" />
+        <img src="@/assets/images/logo-3.png" style="height: 25px" alt="LOGO" />
+        <img src="@/assets/images/logo-4.png" style="height: 25px" alt="LOGO" />
       </div>
     </section>
   </div>

@@ -8,3 +8,7 @@ This is the shared repo about the reproduction of `Gubukyh landing page` from [D
 
 > Install dependencies using `yarn` or `npm install`
 > And run your project localy using `yarn start:dev` or `npm run start:dev`
+
+## Bonus
+
+Set the Gubukuh landing page as Progressive Web App (PWA) 🙂.

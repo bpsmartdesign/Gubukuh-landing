@@ -21,7 +21,7 @@ module.exports = {
       primary: "#3f86fa",
       secondary: "#ff764d",
       "primary-light": "#f0f4fd",
-      "text-primary": "#061d47",
+      "text-primary": "#102752",
       "text-secondary": "#61687b",
       red: {
         50: "#FFF1F0",

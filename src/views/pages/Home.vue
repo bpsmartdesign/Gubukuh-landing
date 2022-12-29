@@ -43,11 +43,11 @@
           />
           <img src="@/assets/images/asset-1.jpg" alt="Asset 1" />
         </div>
-        <ul class="">
-          <li><i class="lab la-twitter"></i></li>
-          <li><i class="lab la-instagram"></i></li>
-          <li><i class="lab la-facebook"></i></li>
-          <li><i class="lab la-telegram"></i></li>
+        <ul class="flex flex-col gap-4">
+          <li><i class="text-4xl text-gray-500 lab la-twitter"></i></li>
+          <li><i class="text-3xl text-gray-500 lab la-instagram"></i></li>
+          <li><i class="text-3xl text-gray-500 lab la-facebook"></i></li>
+          <li><i class="text-3xl text-gray-500 lab la-telegram"></i></li>
         </ul>
       </div>
       <div class="mt-4">

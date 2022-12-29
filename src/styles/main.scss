@@ -1,0 +1,553 @@
+@import "./variable.scss";
+@import "./reset.scss";
+@import "./animate.scss";
+
+@font-face {
+  font-family: "dosis";
+  src: url("../assets/fonts/Dosis-VariableFont_wght.ttf") format("truetype");
+}
+
+//#region all
+html,
+body {
+  overflow: hidden;
+  background-color: #f1f5f8;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+
+  .cva--section_header {
+    &:active,
+    &:focus,
+    &:hover {
+      border-bottom: solid 1px #4b14a34d;
+    }
+  }
+}
+
+[contenteditable][placeholder]:empty:before {
+  content: attr(placeholder);
+  color: gray;
+  background-color: transparent;
+}
+
+.cva--vertical_flip {
+  transform: scaleX(-1);
+}
+
+.cva--rounded_full {
+  border-radius: 50%;
+}
+
+.cva--section_editor {
+  margin: auto;
+}
+
+.cva--img_upload {
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: "Change";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($primary-light, 0.3);
+    }
+  }
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  border-radius: 0.15rem 0.15rem 0.15rem 0.05rem;
+  padding: 1rem !important;
+  position: absolute;
+
+  svg {
+    .ql-fill {
+      fill: $primary !important;
+    }
+
+    .ql-stroke {
+      stroke: $primary !important;
+    }
+
+    &:hover {
+      .ql-fill {
+        fill: rgba($primary, 0.3);
+      }
+
+      .ql-stroke {
+        stroke: rgba($primary, 0.3);
+      }
+    }
+  }
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.15rem;
+  background-color: rgba($primary, 0.05);
+  padding: 0.5rem !important;
+  padding-top: calc(0.5rem + 40px) !important;
+  font-family: "dosis" !important;
+  max-height: 40vh !important;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 0.5rem;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 5px;
+  }
+}
+
+.cva--main_title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: calc(33%);
+    height: 2px;
+    background-color: $primary-light;
+    width: 34%;
+  }
+}
+
+.cva--rounded_xs {
+  border-radius: 0.15rem 0.15rem 0.15rem 0.05rem;
+}
+.cva--rounded_sm {
+  border-radius: 0.5rem 0.5rem 0.5rem 0.15rem;
+}
+.cva--rounded_md {
+  border-radius: 0.75rem 0.75rem 0.75rem 0.3rem;
+}
+.cva--rounded_lg {
+  border-radius: 1rem 1rem 1rem 0.4rem;
+}
+.cva--shadow_xs {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.cva--shadow_sm {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cva--shadow_md {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.cva--shadow_lg {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.cva--primary_block {
+  border: solid 0.1px rgba($color: $primary-light, $alpha: 0.35);
+  background-color: rgba($color: $primary-light, $alpha: 0.1);
+  color: $primary-light;
+
+  &:hover {
+    filter: grayscale(0.65);
+  }
+}
+
+.cva--deco {
+  background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 1px
+    no-repeat;
+  transition: 0.5s;
+  &:hover {
+    --d: 100%;
+  }
+}
+
+.cva--page_container {
+  overflow-x: hidden;
+  height: 100vh;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0.5rem;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 0;
+  }
+}
+
+.cva--container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.cva--hero_section {
+  padding-top: 100px;
+  // height: 100vh;
+
+  .cva--hero_left {
+    position: relative;
+    top: 80px;
+
+    .cva--hero_left_inner {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 100%;
+      height: 100%;
+      background-color: #ff764d;
+      z-index: 2;
+    }
+
+    img {
+      display: inline-block;
+      z-index: 2;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    i {
+      z-index: 1;
+    }
+  }
+}
+
+.cva--deco_section {
+  background-color: rgba($color: $primary-light, $alpha: 0.05);
+  position: relative;
+
+  .cva--deco_item {
+    position: absolute;
+    opacity: 0.08;
+    border-radius: 50%;
+  }
+}
+
+.cva--cButton {
+  &:hover {
+    filter: grayscale(0.4);
+    transform: scale(0.95);
+  }
+}
+
+$animationSpeed: 30s;
+
+@keyframes cva-h-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.cva--slider_main {
+  overflow: hidden;
+  position: relative;
+
+  .cva--slider_track {
+    animation: cva-h-slide $animationSpeed linear infinite;
+    display: flex;
+    width: calc(350px * 14);
+
+    &:hover {
+      animation-play-state: paused;
+    }
+    .cva--slider_slide {
+      width: 350px;
+      position: relative;
+
+      img {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
+
+      .cva--slider_slide_inner {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $primary-light, $alpha: 0.15);
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+
+        .cva--slider_slide_inner {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.cva--img_container {
+  height: 700px;
+
+  img {
+    position: absolute;
+    height: 650px;
+    top: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+    &:nth-child(2) {
+      z-index: 3;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:last-child {
+      right: 0;
+      z-index: 2;
+      transform-origin: right;
+      transform: scale(0.9) translate(0, -55%);
+    }
+
+    &:first-child {
+      left: 0;
+      z-index: 2;
+      transform-origin: left;
+      transform: scale(0.9) translate(0, -55%);
+    }
+  }
+}
+
+.cva--ipt_group {
+  position: relative;
+
+  label {
+    position: absolute;
+    margin: 0.7rem;
+    color: $primary-light;
+  }
+
+  .cva--ipt_prepend {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.7rem;
+
+    &.lite {
+      top: 8.5px;
+      right: 2px;
+
+      i {
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    border: solid 0.1px rgba($color: $primary-light, $alpha: 0.4);
+    width: 100%;
+    border-radius: 0.25rem 0.25rem 0.25rem 0.1rem;
+    padding: 0.75rem;
+    padding-left: 2rem;
+    font-size: 0.85rem;
+
+    &:focus {
+      border-left: solid 3px rgba($primary-light, 0.4);
+    }
+  }
+
+  textarea {
+    padding: 0.75rem;
+  }
+
+  &.lite {
+    width: 50px;
+    transform: translateY(-5px);
+
+    input {
+      letter-spacing: 1.2px;
+      border-radius: 0.15rem;
+      border: none;
+      color: #ffffff;
+      padding: 0.15rem 0.25rem;
+      font-size: 0.5rem;
+      font-weight: 400;
+    }
+  }
+}
+.cva--ipt_tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: solid 0.1px rgba($color: $primary-light, $alpha: 0.4);
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0.25rem 0.1rem;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+
+  label {
+    color: $primary-light;
+  }
+}
+
+.cva--builder_container {
+  .cva--builder_content_left {
+    header {
+      height: clamp(60px, 6vh, 150px);
+    }
+
+    main {
+      height: clamp(calc(100vh - 60px), 94vh, calc(100vh - 150px));
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 0.5rem;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        opacity: 0;
+        border-radius: 0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $primary;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .cva--builder_content_right {
+    .cva--preview_main {
+      .cva--preview_page {
+        background: #ffffff;
+      }
+    }
+  }
+}
+//#endregion
+
+//#region range-input
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 25rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: rgba($primary, 0.2);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: red;
+}
+input[type="range"]::-ms-fill-upper {
+  background: yellow;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: rgba($primary, 0.7);
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid rgba($primary, 0.6);
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: rgba($primary, 0.2);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: rgba($primary, 0.7);
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  outline: 3px solid rgba($primary, 0.6);
+  outline-offset: 0.125rem;
+}
+//#endregion
+
+//#region medium screens
+@media (max-width: $medium) {
+  .cva--m_none {
+    display: none !important;
+  }
+
+  .cva--img_container {
+    height: 550px;
+
+    img {
+      height: 500px;
+    }
+  }
+}
+//#endregion
+
+//#region Tablet
+@media (max-width: $tablet) {
+  .cva--t_none {
+    display: none !important;
+  }
+
+  .cva--img_container {
+    height: 450px;
+
+    img {
+      height: 400px;
+    }
+  }
+}
+//#endregion
